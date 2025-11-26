@@ -12,18 +12,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/error', function () {
+    return view('home');
+});
+
+
 /*
 | Rutas para el flujo de autenticación con Cognito
 */
-Route::get('/login/cognito', [CognitoController::class, 'redirect'])->name('cognito.redirect');
-Route::get('/login/cognito/callback', [CognitoController::class, 'callback'])->name('cognito.callback');
+Route::get('oauth2/login', [CognitoController::class, 'redirect'])->name('redirect');
+Route::get('oauth2/callback', [CognitoController::class, 'callback'])->name('callback');
 
 /*
 | Ruta para cerrar sesión
 | Nota: Es mejor usar un método POST para el logout por seguridad.
 */
-Route::post('/logout', [CognitoController::class, 'logout'])->name('logout');
-
+Route::post('/logout', [CognitoController::class, 'cognitoLogout'])->name('logout');
+Route::get('/logout', function () {
+    return view('logout');
+})->name('logout');
 
 /*
 | Rutas protegidas que requieren autenticación
@@ -33,4 +40,4 @@ Route::middleware(['auth'])->group(function () {
     // Aquí puedes añadir más rutas que necesiten que el usuario esté logueado
 });
 
-//Auth::routes();
+
