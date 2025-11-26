@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Laravel\Socialite\Facades\Socialite;
 use Exception;
 use SocialiteProviders\Cognito\Provider;
@@ -18,11 +19,11 @@ class CognitoController extends Controller
 
     public function callback(): \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
     {
+        $user = null;
         try {
             /** @var Provider $cognitoDriver */
             /** @var \Laravel\Socialite\Contracts\User $cognitoUser */
             $cognitoUser = Socialite::driver('cognito')->stateless()->user();
-
             $user = User::updateOrCreate(
                 [
                     'email' => $cognitoUser->getEmail(),
@@ -33,14 +34,16 @@ class CognitoController extends Controller
                 ]
             );
 
-            Auth::login($user);
+            Auth::login($user, true);
+//            die($user);
 
-            return redirect()->intended('/home'); // laravel/ui redirige a /home
+            return redirect('/home'); // laravel/ui redirige a /home
 
         } catch (Exception $e) {
             // Puedes registrar el error para depuración
-            // Log::error($e->getMessage());
-            return redirect('/login')->with('error', 'Algo salió mal durante la autenticación.');
+//            Log::error($e->getMessage());
+//            die($user);
+            return redirect('/error')->with('error', 'Algo salió mal durante la autenticación.');
         }
     }
 
