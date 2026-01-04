@@ -24,25 +24,29 @@ class CognitoController extends Controller
             /** @var Provider $cognitoDriver */
             /** @var \Laravel\Socialite\Contracts\User $cognitoUser */
             $cognitoUser = Socialite::driver('cognito')->stateless()->user();
+
+            $name = $cognitoUser->user['username'] ?? $cognitoUser->getName();
+
             $user = User::updateOrCreate(
                 [
                     'email' => $cognitoUser->getEmail(),
                 ],
                 [
-                    'name' => $cognitoUser->getName(),
+                    'name' => $name,
                     'cognito_id' => $cognitoUser->getId(),
+                    'password' => '',
                 ]
             );
 
             Auth::login($user, true);
-//            die($user);
+//            dd($cognitoUser);
+//            die();
 
-            return redirect('/home'); // laravel/ui redirige a /home
+            return redirect('/home');
 
         } catch (Exception $e) {
-            // Puedes registrar el error para depuración
+            // Log register for debugging
 //            Log::error($e->getMessage());
-//            die($user);
             return redirect('/error')->with('error', 'Algo salió mal durante la autenticación.');
         }
     }

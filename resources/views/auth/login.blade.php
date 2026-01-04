@@ -69,7 +69,7 @@
                     {{-- AÑADE ESTO --}}
                     <hr>
                     <div class="d-flex justify-content-center">
-                        <a href="{{ route('cognito.redirect') }}" class="btn btn-dark w-100">
+                        <a href="{{ route('redirect') }}" class="btn btn-dark w-100">
                             <i class="fab fa-aws me-2"></i> Iniciar sesión con AWS Cognito
                         </a>
                     </div>

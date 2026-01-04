@@ -12,6 +12,12 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         //
+        $middleware->validateCsrfTokens(except: [
+            //'*' // El asterisco actúa como comodín para todas las rutas
+//            'stripe/*',
+//            'webhook/pagos',
+//            'http://mi-sitio.com/api-sin-proteccion',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
