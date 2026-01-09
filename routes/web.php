@@ -31,7 +31,7 @@ Route::get('oauth2/callback', [CognitoController::class, 'callback'])->name('cal
 */
 Route::get('/logout', function () {
     return view('logout');
-})->name('logout');
+})->name('logout.view');
 
 /*
 | Protected routes
