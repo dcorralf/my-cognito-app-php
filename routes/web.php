@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\CognitoController;
 use App\Http\Controllers\HomeController;
@@ -31,7 +30,7 @@ Route::get('oauth2/callback', [CognitoController::class, 'callback'])->name('cal
 | Logout get route
 */
 Route::get('/logout', function () {
-    return view('welcome');
+    return view('logout');
 })->name('logout');
 
 /*
@@ -39,7 +38,6 @@ Route::get('/logout', function () {
 */
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-    // This below we can add any authentication route
     Route::post('/logout', [CognitoController::class, 'cognitoLogout'])->name('logout');
 });
 

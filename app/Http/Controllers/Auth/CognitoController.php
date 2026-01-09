@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Log;
 use Laravel\Socialite\Facades\Socialite;
 use Exception;
 use SocialiteProviders\Cognito\Provider;
@@ -39,9 +38,8 @@ class CognitoController extends Controller
             );
 
             Auth::login($user, true);
-//            dd($cognitoUser);
-//            die();
 
+            session(["cognito_user_object" => $cognitoUser]);
             return redirect('/home');
 
         } catch (Exception $e) {
