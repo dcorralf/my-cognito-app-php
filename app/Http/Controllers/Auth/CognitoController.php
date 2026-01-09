@@ -43,7 +43,6 @@ class CognitoController extends Controller
             return redirect('/home');
 
         } catch (Exception $e) {
-            // Log register for debugging
 //            Log::error($e->getMessage());
             return redirect('/error')->with('error', 'Algo salió mal durante la autenticación.');
         }
