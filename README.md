@@ -1,59 +1,64 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Repositorio del Curso "AWS Cognito Avanzado: Autenticación con Amazon Web Services"
+## Aplicación de Login social con Laravel 12.x, Laravel Socialite, AWS Cognito y Passkeys
+## Podrás autenticarte con AWS Cognito y Login social con Google, Meta, Linkedin, Amazon, etc.
+### Actualizado en Enero de 2026
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
+### Descripción:
 
-## About Laravel
+- En los ejemplos del curso, haremos login con Cognito, Meta y Amazon. 
+- Los otros proveedores de identidad social también se pueden configurar, para ello es recomendable estudiar la sección 14 (Autenticación con proveedores
+de identidad) del curso.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
+### Puedes encontrar el curso en Udemy y en Frogames Formación (soporte premiun y más contenido):
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [AWS Cognito Avanzado: Autenticación con Amazon Web Services en Frogames](https://cursos.frogamesformacion.com/courses/aws-cognito-avanzado)
+- [AWS Cognito Avanzado: Autenticación con Amazon Web Services en Udemy](https://www.udemy.com/course/aws-cognito-avanzado-autenticacion-con-amazon-web-services)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
+### Requisitos del proyecto ejemplo
 
-## Learning Laravel
+- Recomendable tener el curso y estudiar los ejemplos de Cognito y PHP de las últimas secciones.
+- Conocimientos básicos de Laravel 12 y PHP 8.2.
+- Recomendable también estudiar la sección 14 del curso para configurar correctamente los proveedores de identidad social.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
+### Documentación interesante relacionada con el proyecto:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- [Laravel Socialite](https://laravel.com/docs/12.x/socialite)
+- [Documentación de AWS Cognito es Español](https://docs.aws.amazon.com/es_es/cognito/latest/developerguide/cognito-user-pools)
+- [Inicio de sesión en el grupo de usuarios con proveedores de identidad externos](https://docs.aws.amazon.com/es_es/cognito/latest/developerguide/cognito-user-pools-identity-federation)
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+¿ Estás interesado en conocer a fondo el mundo de la autenticación/autorización de aplicaciones ? Entonces este curso está diseñado especialmente para ti!!
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Lo que aprenderás
 
-## Contributing
+- Aprender conceptos sobre criptografia.
+- Entender qué son los JWT o JSON Web Tokens.
+- Conocer los flujos de autorización de OAuth2.0
+- Aprender cómo funcionan los protocolos de autenticación (OpenID Connect) y autorización (OAuth2.0).
+- Saber cómo configurar AWS Cognito tanto los User Pools como los Identity Pools.
+- Manejar diferentes servicios de AWS como Amplify, Pinpoint, SES, WAF, etc.
+- Cómo implementar autenticación a nuestras aplicaciones con ejemplos de código.
+- Gestionar la autenticación con ejemplos en React, Javascript, Node y Java.
+- Este curso te ayudará a entender cómo funcionan todos los sistemas de autenticación/autorización disponibles en el mercado.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### ¿Hay requisitos para seguir correctamente el curso?
 
-## Code of Conduct
+- Conocimientos básicos de programación en alguno de los lenguajes/librerías que se usan en el curso.
+- Conocimientos básicos sobre criptografía.
+- Conocimientos básicos sobre los servicios de AWS, aunque en el curso se explica paso a paso en todos los ejemplos.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### ¿Para quién es este curso?
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Desarroladores interesados en añadir autenticación a sus aplicaciones con conocimientos básicos o avanzados de programación.
+- Interesados en conocer cómo funciona la parte de autenticación/autorización de aplicaciones.
+- Interesados en aprender estándares o protocolos de autenticación/autorización como OpenId Connect y OAuth2.0
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This example project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
