@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "dcorralf/my-cognito-app-php",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Laravel Socialite con AWS Cognito y Social Login",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
