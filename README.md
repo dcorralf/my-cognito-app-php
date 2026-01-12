@@ -20,8 +20,18 @@ de identidad) del curso.
 ### Requisitos del proyecto ejemplo
 
 - Recomendable tener el curso y estudiar los ejemplos de Cognito y PHP de las últimas secciones.
-- Conocimientos básicos de Laravel 12 y PHP 8.2.
+- Conocimientos básicos de Laravel 12.x y PHP 8.x.
 - Recomendable también estudiar la sección 14 del curso para configurar correctamente los proveedores de identidad social.
+- Utilizar un servidor para probar la aplicación, por ejemplo Laravel Herd o Xampp.
+
+---
+
+### Instalación y ejecución
+
+* `composer install`
+* `npm install`
+* `npm run dev` para arrancar la UI.
+* Acceder a localhost con la ruta correcta.
 
 ---
 ### Documentación interesante relacionada con el proyecto:
