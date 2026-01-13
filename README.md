@@ -30,6 +30,7 @@ de identidad) del curso.
 
 * `composer install`
 * `npm install`
+* `php artisan migrate` para ejecutar las migraciones.
 * `npm run dev` para arrancar la UI.
 * Acceder a localhost con la ruta correcta.
 
