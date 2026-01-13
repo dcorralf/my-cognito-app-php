@@ -31,6 +31,7 @@ de identidad) del curso.
 * `composer install`
 * `php artisan migrate` para crear la BBDD y tabla users
 * `npm install`
+* `php artisan migrate` para ejecutar las migraciones.
 * `npm run dev` para arrancar la UI.
 * Acceder a localhost con la ruta correcta.
 
@@ -38,7 +39,8 @@ de identidad) del curso.
 ### Documentación interesante relacionada con el proyecto:
 
 - [Laravel Socialite](https://laravel.com/docs/12.x/socialite)
-- [Documentación de AWS Cognito es Español](https://docs.aws.amazon.com/es_es/cognito/latest/developerguide/cognito-user-pools)
+- [Documentación Socialite providers](https://socialiteproviders.com/Cognito)
+- [Documentación de AWS Cognito en Español](https://docs.aws.amazon.com/es_es/cognito/latest/developerguide/cognito-user-pools)
 - [Inicio de sesión en el grupo de usuarios con proveedores de identidad externos](https://docs.aws.amazon.com/es_es/cognito/latest/developerguide/cognito-user-pools-identity-federation)
 
 ---
