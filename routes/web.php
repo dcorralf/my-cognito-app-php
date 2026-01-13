@@ -16,7 +16,7 @@ Route::get('/error', function () {
     return view('home');
 });
 
-Route::get('/login', function () { return view('auth.login'); })->name('login');
+Route::get('/login', function () { return view('welcome'); })->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 
 
