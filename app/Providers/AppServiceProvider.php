@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use SocialiteProviders\Cognito\CognitoExtendSocialite;
 use SocialiteProviders\Cognito\Provider;
 use SocialiteProviders\Manager\SocialiteWasCalled;
 
