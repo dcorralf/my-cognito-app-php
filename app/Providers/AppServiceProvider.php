@@ -20,10 +20,24 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
+//    public function boot(): void
+//    {
+//        Event::listen(function (\SocialiteProviders\Manager\SocialiteWasCalled $event) {
+//            $event->extendSocialite('cognito', \SocialiteProviders\Cognito\Provider::class);
+//        });
+//    }
     public function boot(): void
     {
         Event::listen(SocialiteWasCalled::class, function ($event) {
             $event->extendSocialite('cognito', Provider::class);
         });
     }
+//    public function boot(): void
+//    {
+//        // ESTA ES LA PARTE CRÍTICA
+//        Event::listen(
+//            SocialiteWasCalled::class,
+//            [CognitoExtendSocialite::class, 'handle']
+//        );
+//    }
 }

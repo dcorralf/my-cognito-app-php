@@ -30,7 +30,7 @@ de identidad) del curso.
 
 * `composer install`
 * `npm install`
-* `php artisan migrate` para crear la BBDD y tabla users.
+* `php artisan migrate` para crear la BBDD y tabla users
 * `npm run dev` para arrancar la UI.
 * Acceder a localhost con la ruta correcta.
 
