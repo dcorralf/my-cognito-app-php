@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\CognitoController;
 use App\Http\Controllers\HomeController;
@@ -17,8 +16,6 @@ Route::get('/error', function () {
 });
 
 Route::get('/login', function () { return view('welcome'); })->name('login');
-Route::post('/login', [LoginController::class, 'login']);
-
 
 /*
 | Cognito Authentication flow routes
