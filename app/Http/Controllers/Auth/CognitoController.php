@@ -39,8 +39,8 @@ class CognitoController extends Controller
             );
 
             Auth::login($user, true);
-//            dd($cognitoUser);
-//            die();
+
+            session(["cognito_user_object" => $cognitoUser]);
 
             return redirect('/home');
 
@@ -53,7 +53,16 @@ class CognitoController extends Controller
 
     public function cognitoLogout() {
         Auth::logout(); // Log out app
-        return redirect(Socialite::driver('cognito')->logoutCognitoUser()); // Call cognito logout url
+
+        // Invalidar cookie sesión
+        request()->session()->invalidate();
+        // Generar nuevo token CSRF
+        request()->session()->regenerateToken();
+
+        $logoutUrl = Socialite::driver('cognito')->logoutCognitoUser(); // Call cognito logout url
+
+        return redirect($logoutUrl);
+
     }
 }
 

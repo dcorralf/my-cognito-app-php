@@ -26,16 +26,16 @@ Route::get('oauth2/callback', [CognitoController::class, 'callback'])->name('cal
 /*
 | Logout get route
 */
-Route::get('/logout', function () {
-    return view('logout');
-})->name('logout.view');
+//Route::get('/logout', function () {
+//    return view('welcome');
+//})->name('logout');
 
 /*
 | Protected routes
 */
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::post('/logout', [CognitoController::class, 'cognitoLogout'])->name('logout');
+    Route::get('/logout', [CognitoController::class, 'cognitoLogout'])->name('logout');
 });
 
 
